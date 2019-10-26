@@ -1,6 +1,6 @@
 var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
 init = true;
-aDuration = 2000;
+aDuration = 3000;
 function getTrees() {
 
   const http = new XMLHttpRequest();
