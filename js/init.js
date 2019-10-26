@@ -8,5 +8,5 @@ http.onload = () => {
   $("#diff").text((20000000-parseInt(http.responseText)).toLocaleString());
 
 };
-var start = http.responseText;
-console.log(start);
+var start = parseInt(http.responseText);
+//console.log(start);
