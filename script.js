@@ -13,7 +13,7 @@ function getTrees() {
     console.log("We at: "+parseInt(http.responseText));
     console.log(20000000-parseInt(http.responseText));
     $("#diff").text((20000000-parseInt(http.responseText)).toLocaleString());
-    console.log(start-parseInt(http.responseText));
+    console.log(parseint(start)-parseInt(http.responseText));
   };
   return parseInt(http.responseText);
 }
