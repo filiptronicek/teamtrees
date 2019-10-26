@@ -1,12 +1,8 @@
 var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
 init = true;
-
+aDuration = 2000;
 function getTrees() {
-  if(init) {
-    aDuration = 1000;
-  } else {
-    aDuration = 3000;
-  }
+
   const http = new XMLHttpRequest();
 
   http.open("GET", "./api/trees");
@@ -35,4 +31,4 @@ getTrees();
 init = false;
 setInterval(function() {
   getTrees();
-}, 2000);
+}, aDuration);
