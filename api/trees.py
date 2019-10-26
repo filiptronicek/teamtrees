@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from http.server import BaseHTTPRequestHandler
-from datetime import datetime
 
 class handler(BaseHTTPRequestHandler):
 
