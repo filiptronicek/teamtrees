@@ -1,13 +1,28 @@
 h1.trees {
 	text-align: center;
-	font-size: 20vw;
+	font-size: 12vw;
 	font-family: Montserrat,sans-serif;
+	color: #273654;
 }
 span {
 	text-align: center;
-
 }
 body {
 	max-width: 100%;
 	max-height: 100%;
+	background: #cce3e2;
+	color: #273654;
+}
+.plantedText {
+	margin-top: 0px;
+	font-size: 5vw;
+}
+#diff {
+	font-size: 10vw;
+	margin-top: none;
+	margin-bottom: none;
+}
+.textD {
+	font-size: 3vw;
+
 }
