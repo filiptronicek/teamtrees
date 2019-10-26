@@ -8,7 +8,7 @@ function getTrees(start) {
     $("#num").text(parseInt(http.responseText).toLocaleString());
     $("#diff").text((20000000-parseInt(http.responseText)).toLocaleString());
   };
-  return parseInt(http.responseText);
+  return http.responseText;
 }
 var start = getTrees();
 console.log(start);
