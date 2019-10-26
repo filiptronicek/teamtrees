@@ -1,6 +1,6 @@
-h1.trees {
+.trees {
 	text-align: center;
-	font-size: 12vw;
+	font-size: 10vw;
 	font-family: Montserrat,sans-serif;
 	color: #273654;
 }
@@ -18,11 +18,24 @@ body {
 	font-size: 5vw;
 }
 #diff {
-	font-size: 10vw;
+	font-size: 9vw;
 	margin-top: none;
 	margin-bottom: none;
 }
 .textD {
 	font-size: 3vw;
-
 }
+@media only screen and (max-width: 800px) {
+    .trees {
+        font-size: 20vw;
+    }
+    #diff {
+        font-size: 15vw;
+    }
+    .plantedText {
+        font-size: 7vw;
+    }
+    .textD {
+        font-size: 5vw;
+    }
+  }
