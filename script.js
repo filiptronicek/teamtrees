@@ -17,5 +17,6 @@ function getTrees() {
   };
   return parseInt(http.responseText);
 }
+init();
 getTrees();
 setInterval(getTrees, 2000);
