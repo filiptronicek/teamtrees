@@ -18,7 +18,7 @@ function getTrees() {
       number: diff,
       numberStep: comma_separator_number_step
     }, {
-      duration: 1500
+      duration: 5000
     });
     return http.responseText;
   };
