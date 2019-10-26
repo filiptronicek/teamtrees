@@ -13,6 +13,10 @@ def HTTP_C(count):
 		return
 
 def do_GET(self):
+	self.send_response(200)
+	self.send_header('Content-type', 'text/plain')
+	self.end_headers()
+	return
 
 	# Set the URL you want to webscrape from
 	url = 'https://teamtrees.org'
@@ -31,5 +35,8 @@ def do_GET(self):
 	for cell in soup.select('#totalTrees'):
 		print(cell["data-count"] + " trees planted!")
 		HTTP_C(cell["data-count"])
-		
+		count = cell["data-count"]
+		class handler(BaseHTTPRequestHandler):		
+			self.wfile.write(count.encode() + " trees planted!".encode())
+			return
 
