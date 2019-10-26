@@ -5,7 +5,7 @@ function getTrees() {
   if(init) {
     aDuration = 1000;
   } else {
-    aDuration = 15000;
+    aDuration = 5000;
   }
   const http = new XMLHttpRequest();
 
