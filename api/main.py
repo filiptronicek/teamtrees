@@ -21,14 +21,15 @@ def HTTP_C():
 		HTTP_C(cell["data-count"])
 		return cell["data-count"]
 
-def do_GET(self):
-	class handler(BaseHTTPRequestHandler):		
-		self.send_response(200)
-		self.send_header('Content-type', 'text/plain')
-		count = HTTP_C()
-		self.end_headers()
-		self.wfile.write(count.encode() + " trees planted!".encode())
-		return
+class handler(BaseHTTPRequestHandler):
+
+  def do_GET(self):
+    self.send_response(200)
+    self.send_header('Content-type', 'text/plain')
+    self.end_headers()
+    self.wfile.write("Hello world").encode())
+    return
+
 
 
 
