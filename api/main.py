@@ -26,7 +26,7 @@ for cell in soup.select('#totalTrees'):
 			self.send_response(200)
 			self.send_header('Content-type', 'text/plain')
 			self.end_headers()
-			self.wfile.write(cell["data-count"] + " trees planted!")
+			self.wfile.write(cell["data-count"].encode() + " trees planted!".encode())
 			return
 
 
