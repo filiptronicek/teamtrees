@@ -9,8 +9,8 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    #count = Get_Trees()
-    self.wfile.write(str("Hello world").encode())
+    count = Get_Trees()
+    self.wfile.write(str(count).encode())
     return
 
 def Get_Trees():
