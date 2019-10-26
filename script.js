@@ -15,7 +15,7 @@ function getTrees() {
     $("#diff").text((20000000-parseInt(http.responseText)).toLocaleString());
     console.log(start-parseInt(http.responseText));
   };
-  return http.responseText;
+  return parseInt(http.responseText);
 }
 getTrees();
 setInterval(getTrees, 2000);
