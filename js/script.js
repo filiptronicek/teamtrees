@@ -12,7 +12,7 @@ function getTrees() {
   };
 }
 
-
+getTrees();
 setInterval(function() {
     getTrees();
 }, 2000);
