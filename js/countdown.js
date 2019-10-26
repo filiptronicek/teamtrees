@@ -26,9 +26,8 @@ function DownCount() {
         );
         if (hours < 1) {
           $("#timeBox").text(minutes + " minutes and " + seconds + " seconds ");
-          if(minutes < 1) {
+          if (minutes < 1) {
             $("#timeBox").text(seconds + " seconds ");
-
           }
         }
       }
