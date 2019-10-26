@@ -5,7 +5,7 @@ function init() {
 function getTrees() {
   const http = new XMLHttpRequest();
 
-  http.open("GET", "/api/main");
+  http.open("GET", "/api/trees");
   http.send();
 
   http.onload = () => {
@@ -17,4 +17,4 @@ function getTrees() {
   return http.responseText;
 }
 getTrees();
-setInterval(getTrees, 5000);
+setInterval(getTrees, 2000);
