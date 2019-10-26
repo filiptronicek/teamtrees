@@ -4,7 +4,16 @@ from bs4 import BeautifulSoup
 import yagmail
 from http.server import BaseHTTPRequestHandler
 
+def HTTP_C(count):
+	class handler(BaseHTTPRequestHandler):		
+		self.send_response(200)
+		self.send_header('Content-type', 'text/plain')
+		self.end_headers()
+		self.wfile.write(count.encode() + " trees planted!".encode())
+		return
+
 def do_GET(self):
+
 	# Set the URL you want to webscrape from
 	url = 'https://teamtrees.org'
 
@@ -21,11 +30,6 @@ def do_GET(self):
 
 	for cell in soup.select('#totalTrees'):
 		print(cell["data-count"] + " trees planted!")
-		class handler(BaseHTTPRequestHandler):		
-				self.send_response(200)
-				self.send_header('Content-type', 'text/plain')
-				self.end_headers()
-				self.wfile.write(cell["data-count"].encode() + " trees planted!".encode())
-				return
-
+		HTTP_C(cell["data-count"])
+		
 
