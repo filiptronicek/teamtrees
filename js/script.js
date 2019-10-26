@@ -12,7 +12,7 @@ function getTrees() {
       number: http.responseText,
       numberStep: comma_separator_number_step
     }, {
-      duration: 1500
+      duration: 5000
     });
     $("#diff").animateNumber({
       number: diff,
