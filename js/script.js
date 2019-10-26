@@ -12,13 +12,13 @@ function getTrees() {
       number: http.responseText,
       numberStep: comma_separator_number_step
     }, {
-      duration: 5000
+      duration: 10000
     });
     $("#diff").animateNumber({
       number: diff,
       numberStep: comma_separator_number_step
     }, {
-      duration: 5000
+      duration: 10000
     });
     return http.responseText;
   };
