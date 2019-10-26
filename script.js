@@ -1,5 +1,4 @@
-var start = 0;
-function getTrees() {
+function getTrees(start) {
   const http = new XMLHttpRequest();
 
   http.open("GET", "/api/trees");
@@ -12,6 +11,7 @@ function getTrees() {
   };
   return parseInt(http.responseText);
 }
-getTrees();
-start = getTrees();
-setInterval(getTrees, 2000);
+const start = getTrees();
+setInterval(function() {
+    getTrees(start);
+}, 2000);
