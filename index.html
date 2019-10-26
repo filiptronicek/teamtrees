@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function() {
+        var u = "//nfogix.com/";
+        _paq.push(["setTrackerUrl", u + "api/track"]);
+        _paq.push(["setSiteId", "97e57bf8-39cf-4e60-b8be-7fa5e18dec1c"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = u + "js/nfogix.min.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tree counter</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Tree counter</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
-
-<body>
-  <h1 id="num" class="trees"></h1><br>
-  <h2 class="center plantedText">🌳🌲🌳🌲 planted so far </h2>
-  <div class="center textD">That means 
-  we need to 🌱 <div id="diff" class="center"> </div> more
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"> </script>
-  <script src="script.js"></script>
-</body>
-
+  <body>
+    <h1 id="num" class="trees"></h1>
+    <br />
+    <h2 class="center plantedText">🌳🌲🌳🌲 planted so far</h2>
+    <div class="center textD">
+      That means we need to 🌱
+      <div id="diff" class="center"></div>
+      more
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
