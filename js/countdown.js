@@ -1,6 +1,6 @@
 // Set the date we're counting down to
-//var countDownDate = new Date("Jan 1, 2020 0:00").getTime();
-var countDownDate = new Date("Oct 27, 2019 0:00").getTime();
+var countDownDate = new Date("Jan 1, 2020 0:00").getTime();
+//var countDownDate = new Date("Oct 27, 2019 0:00").getTime();
 
 function DownCount() {
   // Get today's date and time
