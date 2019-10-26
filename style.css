@@ -38,6 +38,9 @@ body {
   .textD {
     font-size: 5vw;
   }
+  .github-corner {
+      display: none;
+  }
 }
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
@@ -63,4 +66,5 @@ body {
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
+
 }
