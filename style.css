@@ -2,7 +2,6 @@
   text-align: center;
   font-size: 10vw;
   font-family: Montserrat, sans-serif;
-  color: #273654;
 }
 span {
   text-align: center;
@@ -70,4 +69,10 @@ body {
 }
 .madeBy {
   padding-top: 50px;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+  background: #273654;
+  color: #cce3e2;
+  }
 }
