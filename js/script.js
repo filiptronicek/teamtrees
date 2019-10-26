@@ -3,7 +3,7 @@ var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
 function getTrees() {
   const http = new XMLHttpRequest();
 
-  http.open("GET", "./api/trees.txt");
+  http.open("GET", "./api/trees");
   http.send();
 
   http.onload = () => {
