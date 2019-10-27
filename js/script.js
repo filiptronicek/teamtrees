@@ -8,10 +8,13 @@ console.log("getting ping");
 $.get("./api/ping", function(
   data
 ) {
+  if(data == "HTTP Error 502: Bad Gateway") {
+    location.href="down.html";
+
+  }
   console.log(data);
 });
 function getTrees() {
-  location.href="down.html"
   const http = new XMLHttpRequest();
 
 
@@ -22,6 +25,10 @@ function getTrees() {
     http.send();
 
     http.onload = () => {
+      if(http.responseText == "The service is unavailable.") {
+        location.href="down.html";
+
+      }
       var diff = 20000000 - parseInt(http.responseText);
       $("#num").animateNumber(
         {
