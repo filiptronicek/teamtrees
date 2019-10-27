@@ -57,6 +57,7 @@ function getTrees() {
 }
 
 getTrees();
+Ping();
 init = false;
 setInterval(function() {
   getTrees();
