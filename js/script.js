@@ -8,7 +8,7 @@ console.log("getting ping");
 $.get("./api/ping", function(
   data
 ) {
-  if(data == "HTTP Error 502: Bad Gateway") {
+  if(data == "HTTP Error 502: Bad Gateway" || data == "HTTP Error 503: Service Not Available") {
     location.href="down.html";
 
   }
