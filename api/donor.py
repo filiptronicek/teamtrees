@@ -47,7 +47,7 @@ def Get_Trees():
 
           donationTextArray = donation.getText().split("\n")
           donationTextArray = [x for x in donationTextArray if x]
-          donationDict = {'name':donationTextArray[0],'tree_count':donationTextArray[1],'time':donationTimeNowAndDonationOnWebsiteDifference}
+          donationDict = {'name':donationTextArray[0],'tree_count':donationTextArray[1],'time':donationTimeNowAndDonationOnWebsiteDifference, 'msg':donationTextArray[3]}
           jsonDonationDictionary = json.dumps(donationDict)
           #return donationTimeNowAndDonationOnWebsiteDifference
           return jsonDonationDictionary
