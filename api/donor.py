@@ -20,9 +20,15 @@ def Get_Trees():
   url = 'https://teamtrees.org'
 
  # print("Making a request to",url)
-
+  try:
+      response = requests.get(url)
+  except requests.exceptions.Timeout:
+    return "Error"
+  except requests.exceptions.TooManyRedirects:
+    return "Error"
+  except requests.exceptions.RequestException as e:
+    return "Error :"+e
   # Connect to the URL
-  response = requests.get(url)
   print("Got index")
 
   # Parse HTML and save to BeautifulSoup object
@@ -39,7 +45,9 @@ def Get_Trees():
           timeNowInUTC = (timeObj.hour * 3600) + (timeObj.minute * 60) + (timeObj.second)
           donationTimeNowAndDonationOnWebsiteDifference = timeNowInUTC - donationTimeDifference
 
-          donation
-          return donationTimeNowAndDonationOnWebsiteDifference
-          #return donation.getText()
+          donationTextArray = donation.getText().split("\\n")
+          donationDict = {'name':donationTextArray[0],'tree_count':donationTextArray[1],'time': donationTextArray[2],'message': donationTextArray[3]}
+          jsonDonationDictionary = json.dumps(donationDict)
+          #return donationTimeNowAndDonationOnWebsiteDifference
+          return jsonDonationDictionary
 
