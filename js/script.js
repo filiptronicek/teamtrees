@@ -1,9 +1,6 @@
-var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
-  ","
-);
-init = true;
+var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
 aDuration = 3000;
-
+/*
 function Ping() {
   console.log("getting ping");
 
@@ -17,49 +14,35 @@ $.get("./api/ping", function(
   console.log(data);
 });
 }
+*/
 function getTrees() {
+
   const http = new XMLHttpRequest();
 
+  http.open("GET", "./api/");
+  http.send();
 
   http.onload = () => {
-    //http.open("GET", "./api/index.txt ");
-    console.log("Getting numbers");
-    http.open("GET", "./api/ ");
-    http.send();
-
-    http.onload = () => {
-      if(http.responseText == "The service is unavailable.") {
-        location.href="down.html";
-
-      }
-      var diff = 20000000 - parseInt(http.responseText);
-      $("#num").animateNumber(
-        {
-          number: http.responseText,
-          numberStep: comma_separator_number_step
-        },
-        {
-          duration: aDuration
-        }
-      );
-      $("#diff").animateNumber(
-        {
-          number: diff,
-          numberStep: comma_separator_number_step
-        },
-        {
-          duration: aDuration
-        }
-      );
-      return http.responseText;
-    };
+    var diff = 20000000 - parseInt(http.responseText);
+    $("#num").animateNumber({
+      number: http.responseText,
+      numberStep: comma_separator_number_step
+    }, {
+      duration: aDuration
+    });
+    $("#diff").animateNumber({
+      number: diff,
+      numberStep: comma_separator_number_step
+    }, {
+      duration: aDuration
+    });
+    return http.responseText;
   };
+
 }
 
 getTrees();
-Ping();
-init = false;
+//Ping();
 setInterval(function() {
   getTrees();
 }, aDuration);
-setInterval(Ping, 10000);
