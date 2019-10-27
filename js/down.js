@@ -1,1 +1,1 @@
-setTimeout(location.href="./", 5000);
+setTimeout(location.href="./", 3000);
