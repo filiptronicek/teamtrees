@@ -3,7 +3,7 @@
   font-size: 10vw;
   font-family: Montserrat, sans-serif;
   font-weight: 900;
-  line-height: .875;
+  line-height: 0.875;
 }
 span {
   text-align: center;
@@ -23,7 +23,6 @@ body {
   margin-top: none;
   margin-bottom: none;
   font-weight: 750;
-
 }
 .textD {
   font-size: 3vw;
@@ -42,7 +41,7 @@ body {
     font-size: 5vw;
   }
   .github-corner {
-      display: none;
+    display: none;
   }
 }
 .github-corner:hover .octo-arm {
@@ -69,14 +68,13 @@ body {
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
-
 }
 .madeBy {
   padding-top: 50px;
 }
 @media (prefers-color-scheme: dark) {
   body {
-  background: #273654;
-  color: #cce3e2;
+    background: #273654;
+    color: #cce3e2;
   }
 }
