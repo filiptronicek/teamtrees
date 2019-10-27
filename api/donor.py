@@ -43,7 +43,7 @@ def Get_Trees():
           donationTimeDifference += int(donationTimeDifferenceArray[2].split(".")[0])
           timeObj = datetime.datetime.now()
           timeNowInUTC = (timeObj.hour * 3600) + (timeObj.minute * 60) + (timeObj.second)
-          donationTimeNowAndDonationOnWebsiteDifference = (donationTimeDifference - timeNowInUTC) - 3600
+          donationTimeNowAndDonationOnWebsiteDifference = (donationTimeDifference - timeNowInUTC)
 
           donationTextArray = donation.getText().split("\n")
           donationTextArray = [x for x in donationTextArray if x]
