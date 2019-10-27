@@ -13,6 +13,7 @@ function getTrees() {
     if(ping.responseText != "200") {
       console.log("Status code is: " + ping.responseText);
     } else {
+      console.log(ping.responseText);
       http.onload = () => {
         //http.open("GET", "./api/index.txt ");
         http.open("GET", "./api/ ");
