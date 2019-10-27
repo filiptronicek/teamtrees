@@ -5,8 +5,8 @@ function getTrees() {
 
   const http = new XMLHttpRequest();
 
-  http.open("GET", "./api/index.txt ");
-  //http.open("GET", "./api/ ");
+  //http.open("GET", "./api/index.txt ");
+  http.open("GET", "./api/ ");
   http.send();
 
   http.onload = () => {
