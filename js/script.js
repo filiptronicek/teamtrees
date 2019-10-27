@@ -4,7 +4,9 @@ var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
 init = true;
 aDuration = 3000;
 
-console.log("getting ping");
+function Ping() {
+  console.log("getting ping");
+
 $.get("./api/ping", function(
   data
 ) {
@@ -14,6 +16,7 @@ $.get("./api/ping", function(
   }
   console.log(data);
 });
+}
 function getTrees() {
   const http = new XMLHttpRequest();
 
@@ -58,3 +61,4 @@ init = false;
 setInterval(function() {
   getTrees();
 }, aDuration);
+setInterval(Ping, 10000);

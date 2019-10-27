@@ -1,4 +1,4 @@
 function goBack() {
     location.href="./";
 }
-setTimeout(goBack, 3000);
+setTimeout(goBack, 10000);
