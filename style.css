@@ -2,6 +2,8 @@
   text-align: center;
   font-size: 10vw;
   font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  line-height: .875;
 }
 span {
   text-align: center;
@@ -20,13 +22,15 @@ body {
   font-size: 9vw;
   margin-top: none;
   margin-bottom: none;
+  font-weight: 750;
+
 }
 .textD {
   font-size: 3vw;
 }
 @media only screen and (max-width: 800px) {
   .trees {
-    font-size: 20vw;
+    font-size: 18vw;
   }
   #diff {
     font-size: 15vw;
