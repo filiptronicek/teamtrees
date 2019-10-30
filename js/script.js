@@ -1,5 +1,5 @@
 let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
-let aDuration = 500;
+let aDuration = 1000;
 let refreshDuration = 1000;
 /*
 function Ping() {
