@@ -77,19 +77,68 @@ body {
     background: #273654;
     color: #cce3e2;
   }
+  .panel {
+    background: #222f49 !important;
+  }
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-      .madeBy {
-        font-family: "Open Sans", cursive;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-      }
-      .madeBy > span > a {
-        font-weight: 600;
-        color: black;
-        text-decoration: none;
-      }
-      .madeBy > span > a > img {
-        border-radius: 250px;
-        width: 25px;
-      }
+.madeBy {
+  font-family: "Open Sans", cursive;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.madeBy > span > a {
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+.madeBy > span > a > img {
+  border-radius: 250px;
+  width: 25px;
+}
+.accordion {
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 40%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  background: #ccc;
+
+}
+.accordion:focus{
+  background: #ccc;
+
+}
+
+.active,
+.accordion:hover {
+  background: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background: #b3c9c8;
+  overflow: hidden;
+  width: 40%;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}

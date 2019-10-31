@@ -1,6 +1,8 @@
 let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
 let aDuration = 1000;
 let refreshDuration = 1000;
+let acc = document.getElementsByClassName("accordion");
+let i;
 /*
 function Ping() {
   console.log("getting ping");
@@ -47,3 +49,17 @@ getTrees();
 setInterval(function() {
   getTrees();
 }, refreshDuration);
+
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+
+    }
+  });
+}
