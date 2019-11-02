@@ -29,7 +29,7 @@ body {
 }
 @media only screen and (max-width: 800px) {
   .trees {
-    font-size: 18vw;
+    font-size: 16vw;
   }
   #diff {
     font-size: 15vw;
