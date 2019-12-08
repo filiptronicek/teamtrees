@@ -87,7 +87,6 @@ body {
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 .madeBy {
-  font-family: "Open Sans", cursive;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
