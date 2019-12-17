@@ -1,6 +1,6 @@
 let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
 let aDuration = 4000;
-let refreshDuration = 8000;
+let refreshDuration = 4000;
 let acc = document.getElementsByClassName("accordion");
 let i;
 
