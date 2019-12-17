@@ -3,21 +3,8 @@ let aDuration = 4000;
 let refreshDuration = 8000;
 let acc = document.getElementsByClassName("accordion");
 let i;
-/*
-function Ping() {
-  console.log("getting ping");
 
-$.get("./api/ping", function(
-  data
-) {
-  if(data == "HTTP Error 502: Bad Gateway" || data == "HTTP Error 503: Service Not Available") {
-    location.href="down.html";
 
-  }
-  console.log(data);
-});
-}
-*/
 function getTrees() {
 
   const http = new XMLHttpRequest();
@@ -45,11 +32,9 @@ function getTrees() {
 }
 
 getTrees();
-//Ping();
 setInterval(function() {
   getTrees();
 }, refreshDuration);
-
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
