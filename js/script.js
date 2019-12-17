@@ -1,46 +1,53 @@
-let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
+let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
+  ","
+);
 let aDuration = 4000;
 let refreshDuration = 4000;
 let acc = document.getElementsByClassName("accordion");
 let i;
 
-
 function getTrees() {
+  if (document.hasFocus()) {
+    const http = new XMLHttpRequest();
 
-  const http = new XMLHttpRequest();
+    http.open("GET", "./api/");
+    http.send();
 
-  http.open("GET", "./api/");
-  http.send();
+    http.onload = () => {
+      let diff = 20000000 - parseInt(http.responseText);
 
-  http.onload = () => {
-    let diff = 20000000 - parseInt(http.responseText);
-
-    if(parseInt(http.responseText) >= 20000000) {
+      if (parseInt(http.responseText) >= 20000000) {
         $("#num").text(`🎉${http.responseText}🎉`);
         $("#toBeRemovedInCompletion").hide();
         $(".toBeShown").show();
         $("body").append("<div id='done'>");
-    } else {
-      $("#num").animateNumber({
-        number: http.responseText,
-        numberStep: comma_separator_number_step
-      }, {
-        duration: aDuration
-      });
-      $("#diff").animateNumber({
-        number: diff,
-        numberStep: comma_separator_number_step
-      }, {
-        duration: aDuration
-      });
-    }
+      } else {
+        $("#num").animateNumber(
+          {
+            number: http.responseText,
+            numberStep: comma_separator_number_step
+          },
+          {
+            duration: aDuration
+          }
+        );
+        $("#diff").animateNumber(
+          {
+            number: diff,
+            numberStep: comma_separator_number_step
+          },
+          {
+            duration: aDuration
+          }
+        );
+      }
 
-    return http.responseText;
-  };
-
+      return http.responseText;
+    };
+  }
 }
 function getTreesValidate() {
-  if ($("#done").length > 0){
+  if ($("#done").length > 0) {
     getTrees();
   }
 }
@@ -58,7 +65,6 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
-
     }
   });
 }
