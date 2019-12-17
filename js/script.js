@@ -19,6 +19,7 @@ function getTrees() {
         $("#num").text(`🎉${http.responseText}🎉`);
         $("#toBeRemovedInCompletion").hide();
         $(".toBeShown").show();
+        $("body").append("<div id='done'>");
     } else {
       $("#num").animateNumber({
         number: http.responseText,
@@ -38,10 +39,15 @@ function getTrees() {
   };
 
 }
-
+function getTreesValidate() {
+  if ($("#done").length > 0){
+    getTrees();
+  }
+}
 getTrees();
+
 setInterval(function() {
-  getTrees();
+  getTreesValidate();
 }, refreshDuration);
 
 for (i = 0; i < acc.length; i++) {
