@@ -14,18 +14,26 @@ function getTrees() {
 
   http.onload = () => {
     let diff = 20000000 - parseInt(http.responseText);
-    $("#num").animateNumber({
-      number: http.responseText,
-      numberStep: comma_separator_number_step
-    }, {
-      duration: aDuration
-    });
-    $("#diff").animateNumber({
-      number: diff,
-      numberStep: comma_separator_number_step
-    }, {
-      duration: aDuration
-    });
+
+    if(parseInt(http.responseText) >= 20000000) {
+        $("#num").text(`🎉${http.responseText}🎉`);
+        $("#toBeRemovedInCompletion").hide();
+        $(".toBeShown").show();
+    } else {
+      $("#num").animateNumber({
+        number: http.responseText,
+        numberStep: comma_separator_number_step
+      }, {
+        duration: aDuration
+      });
+      $("#diff").animateNumber({
+        number: diff,
+        numberStep: comma_separator_number_step
+      }, {
+        duration: aDuration
+      });
+    }
+
     return http.responseText;
   };
 
