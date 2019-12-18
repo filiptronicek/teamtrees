@@ -6,6 +6,16 @@ let refreshDuration = 4000;
 let acc = document.getElementsByClassName("accordion");
 let i;
 
+$("#diff").animateNumber(
+  {
+    number: 20000000,
+    numberStep: comma_separator_number_step
+  },
+  {
+    duration: 500
+  }
+);
+
 function getTrees() {
   if (document.hasFocus()) {
     const http = new XMLHttpRequest();
@@ -51,7 +61,9 @@ function getTreesValidate() {
     getTrees();
   }
 }
-getTrees();
+setTimeout(() => {
+  getTrees();
+}, 500);
 
 setInterval(function() {
   getTreesValidate();
