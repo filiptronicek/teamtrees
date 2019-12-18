@@ -12,7 +12,7 @@ $("#diff").animateNumber(
     numberStep: comma_separator_number_step
   },
   {
-    duration: 500
+    duration: 99
   }
 );
 
@@ -63,7 +63,7 @@ function getTreesValidate() {
 }
 setTimeout(() => {
   getTrees();
-}, 500);
+}, 100);
 
 setInterval(function() {
   getTreesValidate();
