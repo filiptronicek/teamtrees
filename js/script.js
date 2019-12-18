@@ -17,7 +17,7 @@ $("#diff").animateNumber(
 );
 
 function getTrees() {
-  if (document.hasFocus()) {
+  //if (document.hasFocus()) {
     const http = new XMLHttpRequest();
 
     http.open("GET", "./api/");
@@ -54,7 +54,7 @@ function getTrees() {
 
       return http.responseText;
     };
-  }
+  //}
 }
 function getTreesValidate() {
   getTrees();
