@@ -57,9 +57,7 @@ function getTrees() {
   }
 }
 function getTreesValidate() {
-  if ($("#done").length > 0) {
-    getTrees();
-  }
+  getTrees();
 }
 setTimeout(() => {
   getTrees();
