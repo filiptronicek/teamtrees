@@ -1,8 +1,8 @@
 let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
   ","
 );
-let aDuration = 4000;
-let refreshDuration = 4000;
+let aDuration = 3000;
+let refreshDuration = 1500;
 let acc = document.getElementsByClassName("accordion");
 let i;
 
@@ -16,11 +16,20 @@ $("#diff").animateNumber(
   }
 );
 
+
+
+let items = ["#86688b", "#634790", "#5eb8e3", "#468b44", "#b04242", "#41518b", "#3fc8e5", "#559242", "#250d40", "#de2a97"];
+
+function changeBg() {
+  let bgClr = items[Math.floor(Math.random()*items.length)];
+  $("body").css("background", bgClr);
+
+}
 function getTrees() {
   //if (document.hasFocus()) {
     const http = new XMLHttpRequest();
 
-    http.open("GET", "./api/");
+    http.open("GET", "./api/index.txt");
     http.send();
 
     http.onload = () => {
@@ -31,6 +40,12 @@ function getTrees() {
         $("#toBeRemovedInCompletion").hide();
         $(".toBeShown").show();
         $("body").append("<div id='done'>");
+        
+        changeBg();
+        changeBg();
+        changeBg();
+
+
       } else {
         $("#num").animateNumber(
           {
