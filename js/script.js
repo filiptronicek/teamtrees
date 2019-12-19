@@ -29,7 +29,7 @@ function getTrees() {
   //if (document.hasFocus()) {
     const http = new XMLHttpRequest();
 
-    http.open("GET", "./api/index.txt");
+    http.open("GET", "./api/");
     http.send();
 
     http.onload = () => {
