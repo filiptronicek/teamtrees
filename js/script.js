@@ -35,8 +35,8 @@ function getTrees() {
     http.onload = () => {
       let diff = 20000000 - parseInt(http.responseText);
 
-      if (parseInt(http.responseText) >= 20000000) {
-        $("#num").text(`🎉${http.responseText}🎉`);
+      if (parseInt(http.responseText.toLocaleString()) >= 20000000) {
+        $("#num").text(`🎉${http.responseText.}🎉`);
         $("#toBeRemovedInCompletion").hide();
         $(".toBeShown").show();
         $("body").append("<div id='done'>");
