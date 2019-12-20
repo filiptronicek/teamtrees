@@ -35,7 +35,8 @@ function getTrees() {
     http.onload = () => {
       let diff = 20000000 - parseInt(http.responseText);
 
-      if (parseInt(http.responseText) >= 20000000) {
+      if (parseInt(http.responseText) >= 20000000 && parseInt(http.responseText) <= 21000000) {
+        $("body").css("color", "#cce3e2");
         $("#num").text(`🎉${Number(http.responseText).toLocaleString()}🎉`);
         $("#toBeRemovedInCompletion").hide();
         $(".toBeShown").show();
@@ -47,6 +48,7 @@ function getTrees() {
 
 
       } else {
+
         $("#num").animateNumber(
           {
             number: http.responseText,
