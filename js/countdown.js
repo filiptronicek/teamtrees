@@ -19,7 +19,7 @@ function DownCount() {
   if (days < 10) {
     $("#timeBox").text(days + " days and " + hours + " hours ");
     if (days < 1) {
-      $("#timeBox").text(hours + " hours and" + minutes + " minutes ");
+      $("#timeBox").text(hours + " hours and " + minutes + " minutes ");
       if (hours < 5) {
         $("#timeBox").text(
           hours + " hours, " + minutes + " minutes and " + seconds + " seconds "
