@@ -35,22 +35,22 @@ function getTrees() {
     http.onload = () => {
       let diff = 20000000 - parseInt(http.responseText);
 
-      if (parseInt(http.responseText) >= 20000000) {
+      if (parseInt(http.responseText) >= 20000000 && parseInt(http.responseText) <= 21000000) {
         $("body").css("color", "#cce3e2");
         $("#num").text(`🎉${Number(http.responseText).toLocaleString()}🎉`);
         $("#toBeRemovedInCompletion").hide();
-        $(".toBeShown").show();
-        $("body").append("<div id='done'>");
-        
+        $(".toBeShown").show();        
         changeBg();
         changeBg();
         changeBg();
 
 
-      } else if(parseInt(http.responseText) <= 21000000) {
+      } else if(parseInt(http.responseText) > 21000000) {
         $("#toBeRemovedInCompletion").hide();
         $(".toBeShown").show();
-
+        changeBg();
+        changeBg();
+        changeBg();
       }
       {
 
